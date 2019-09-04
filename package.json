@@ -11,6 +11,7 @@
   ],
   "author": "RenCloud",
   "license": "MIT",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/rensatsu/konsole-js.git"
