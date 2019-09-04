@@ -62,7 +62,7 @@ class Konsole {
         let mStart = '';
         let mEnd = '';
 
-        const mTag = this.tag && this.tag.length > 0 ? this.tag : '';
+        const mTag = this.tag && this.tag.length > 0 ? `[${this.tag}]` : '';
         const mText = this.text ? `${mTag}[${level}]` : mTag;
 
         switch (true) {
