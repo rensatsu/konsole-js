@@ -21,3 +21,6 @@ Konsole is a better console output.
 * `crit(...args)`
 * `alert(...args)`
 * `emerg(...args)`
+
+## Install
+`npm i --save git+ssh://git@github.com:rensatsu/konsole-js.git#master`
