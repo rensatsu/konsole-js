@@ -2,6 +2,9 @@
 
 Konsole is a better console output.
 
+## Install
+`npm i --save git+ssh://git@github.com:rensatsu/konsole-js.git#master`
+
 ## Environment options
 * `KONSOLE_COLORS` - [1, 0]: enables or disables colors in the output.
 * `KONSOLE_PREFIX` - [1, 0]: enables or disables printing systemd prefix in the output.
@@ -21,6 +24,3 @@ Konsole is a better console output.
 * `crit(...args)`
 * `alert(...args)`
 * `emerg(...args)`
-
-## Install
-`npm i --save git+ssh://git@github.com:rensatsu/konsole-js.git#master`

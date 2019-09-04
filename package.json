@@ -1,6 +1,6 @@
 {
   "name": "konsole-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Konsole is a better console output",
   "main": "src/index.js",
   "scripts": {
@@ -10,5 +10,9 @@
     "console"
   ],
   "author": "RenCloud",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rensatsu/konsole-js.git"
+  }
 }
