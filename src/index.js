@@ -10,10 +10,18 @@ const PREFIX_ALERT = 1;
 const PREFIX_EMERG = 0;
 
 class Konsole {
-    constructor({ colors = true, prefix = false, text = true } = { }) {
+    constructor(
+        {
+            colors = true,
+            prefix = false,
+            text = true,
+            tag = null
+        } = {}
+    ) {
         this.colors = colors;
         this.prefix = prefix;
         this.text = text;
+        this.tag = tag;
     }
 
     loadEnv() {
@@ -27,6 +35,10 @@ class Konsole {
 
         if ('KONSOLE_TEXT' in process.env) {
             this.setText(!!parseInt(process.env.KONSOLE_TEXT));
+        }
+
+        if ('KONSOLE_TAG' in process.env) {
+            this.setTag(process.env.KONSOLE_TAG);
         }
     }
 
@@ -42,10 +54,16 @@ class Konsole {
         this.text = !!enable;
     }
 
+    setTag(tag) {
+        this.tag = tag;
+    }
+
     _print(color, prefix, level, fName, ...args) {
         let mStart = '';
         let mEnd = '';
-        let mText = this.text ? `[${level}]` : '';
+
+        const mTag = this.tag && this.tag.length > 0 ? this.tag : '';
+        const mText = this.text ? `${mTag}[${level}]` : mTag;
 
         switch (true) {
             case (this.colors && this.prefix):
