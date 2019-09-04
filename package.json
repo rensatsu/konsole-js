@@ -1,0 +1,14 @@
+{
+  "name": "konsole-js",
+  "version": "1.0.0",
+  "description": "Konsole is a better console output",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "console"
+  ],
+  "author": "RenCloud",
+  "license": "MIT"
+}
