@@ -9,6 +9,12 @@ const PREFIX_CRIT = 2;
 const PREFIX_ALERT = 1;
 const PREFIX_EMERG = 0;
 
+const COLOR_DEFAULT = 37;
+const COLOR_RED = 31;
+const COLOR_GREEN = 32;
+const COLOR_YELLOW = 33;
+const COLOR_BLUE = 34;
+
 class Konsole {
     constructor(
         {
@@ -88,39 +94,39 @@ class Konsole {
     }
 
     log(...args) {
-        this._print(39, PREFIX_DEBUG, 'Debug', 'log', ...args);
+        this._print(COLOR_DEFAULT, PREFIX_DEBUG, 'Debug', 'log', ...args);
     }
 
     info(...args) {
-        this._print(94, PREFIX_INFO, 'Info', 'log', ...args);
+        this._print(COLOR_BLUE, PREFIX_INFO, 'Info', 'log', ...args);
     }
 
     warn(...args) {
-        this._print(33, PREFIX_WARNING, 'Warning', 'log', ...args);
+        this._print(COLOR_YELLOW, PREFIX_WARNING, 'Warning', 'log', ...args);
     }
 
     error(...args) {
-        this._print(31, PREFIX_ERR, 'Error', 'log', ...args);
+        this._print(COLOR_RED, PREFIX_ERR, 'Error', 'log', ...args);
     }
 
     success(...args) {
-        this._print(32, PREFIX_INFO, 'Success', 'log', ...args);
+        this._print(COLOR_GREEN, PREFIX_INFO, 'Success', 'log', ...args);
     }
 
     notice(...args) {
-        this._print(39, PREFIX_NOTICE, 'Notice', 'log', ...args);
+        this._print(COLOR_DEFAULT, PREFIX_NOTICE, 'Notice', 'log', ...args);
     }
 
     crit(...args) {
-        this._print(31, PREFIX_CRIT, 'Critical', 'log', ...args);
+        this._print(COLOR_RED, PREFIX_CRIT, 'Critical', 'log', ...args);
     }
 
     alert(...args) {
-        this._print(31, PREFIX_ALERT, 'Alert', 'log', ...args);
+        this._print(COLOR_RED, PREFIX_ALERT, 'Alert', 'log', ...args);
     }
 
     emerg(...args) {
-        this._print(31, PREFIX_EMERG, 'Emergency', 'log', ...args);
+        this._print(COLOR_RED, PREFIX_EMERG, 'Emergency', 'log', ...args);
     }
 }
 

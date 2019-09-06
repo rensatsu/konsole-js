@@ -1,6 +1,6 @@
 {
   "name": "konsole-js",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Konsole is a better console output",
   "main": "src/index.js",
   "scripts": {
